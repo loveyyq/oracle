@@ -34,11 +34,11 @@
 
 ## 2.类图设计
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/%E7%B1%BB%E5%9B%BE.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/%E7%B1%BB%E5%9B%BE.png)
 
 ## 3.数据库设计
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/%E6%95%B0%E6%8D%AE%E5%BA%93.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/%E6%95%B0%E6%8D%AE%E5%BA%93.jpg)
 
 ### 3.1 admin(管理员表)
 
@@ -133,7 +133,7 @@ CREATE TABLESPACE train_user logging  DATAFILE '/home/oracle/app/oracle/oradata/
 CREATE TABLESPACE train_public logging  DATAFILE '/home/oracle/app/oracle/oradata/orcl/pdborcl/train_data03.dbf' size 200m autoextend on next 65m maxsize 10240m extent management local;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/3-1.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/3-1.png)
 
 ##### 表空间中存放的表:
 
@@ -305,7 +305,7 @@ select TABLE_NAME from dba_tables where TABLESPACE_NAME='TRAIN_USER';
 select TABLE_NAME from dba_tables where TABLESPACE_NAME='TRAIN_PUBLIC';
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/3-2.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/3-2.png)
 
 ##### 每个表插入数据：
 
@@ -570,7 +570,7 @@ select count(*) from seat;
 select count(*) from ticket;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/3-3.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/3-3.png)
 
 ## 4.设计权限及用户分配方案
 
@@ -619,7 +619,7 @@ GRANT  c##t_manage TO  c##train_manage;
 GRANT  c##t_user TO  c##train_user;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/4.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/4.png)
 
 ## 5.在数据库中建立一个程序包，在包中用PL/SQL语言设计一些存储过程和函数，实现比较复杂的业务逻辑，用模拟数据进行执行计划分析。
 
@@ -698,7 +698,7 @@ create user c##cc_r identified by 123 default tablespace bp quota unlimited on b
 grant connect,resource,recovery_catalog_owner to c##cc_r;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-1.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-1.png)
 
 - 连接RMAN恢复目录数据库
 
@@ -717,7 +717,7 @@ rman catalog c##cc_r/123 target /
 register database;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-2.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-2.png)
 
 - 通道分配
 
@@ -734,7 +734,7 @@ allocate channel ch3 device type disk;
 show all;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-3.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-3.png)
 
 - 归档模式下备份与恢复
 
@@ -754,18 +754,18 @@ rman catalog c##cc_r/123 target /
 backup database;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-4.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-4.png)
 
 - 测试备份情况
 
-```
+```sql
 -- 切换到保存路径
 cd /home/oracle/app/oracle/recovery_area/ORCL/backupset/
 -- 查看文件
 ls
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-5.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-5.png)
 
 - 测试恢复功能
 
@@ -806,15 +806,15 @@ cd /home/oracle/app/oracle/oradata/orcl/pdborcl
 ls
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-6-1.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-6-1.png)
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-6-2.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-6-2.png)
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-6-3.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-6-3.png)
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-6-4.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-6-4.png)
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/6-6-5.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/img/6-6-5.png)
 
 ## 7.总结
 

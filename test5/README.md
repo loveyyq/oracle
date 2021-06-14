@@ -21,7 +21,7 @@
 
 - 用户loveyyq登录WEI数据库
 
-![](https://github.com/loveyyq/oracle/blob/master/test5/1-1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test5/img/1-1.jpg)
 
 - 创建一个包(Package)，包名是MyPack
 
@@ -32,7 +32,7 @@ create or replace PACKAGE MyPack IS
 END MyPack;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test5/1-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test5/img/1-2.jpg)
 
 - 创建FUNCTION Get_SaleAmount和PROCEDURE GET_EMPLOYEES
   - 在MyPack中创建一个函数SaleAmount ，查询部门表，统计每个部门的销售总金额，每个部门的销售额是由该部门的员工(ORDERS.EMPLOYEE_ID)完成的销售额之和。函数SaleAmount要求输入的参数是部门号，输出部门的销售金额
@@ -69,7 +69,7 @@ END MyPack;
 /
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test5/1-3.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test5/img/1-3.jpg)
 
 - 由于订单只是按日期分区的，上述统计是全表搜索，因此统计速度会比较慢，如何提高统计的速度呢？
 
@@ -84,9 +84,9 @@ select count(*) from orders;
 select MyPack.Get_SaleAmount(11) AS 部门11应收金额,MyPack.Get_SaleAmount(12) AS 部门12应收金额 from dual;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test5/2-1-1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test5/img/2-1-1.jpg)
 
-![](https://github.com/loveyyq/oracle/blob/master/test5/2-1-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test5/img/2-1-2.jpg)
 
 - 测试过程Get_Employees()
 
@@ -103,7 +103,7 @@ END;
 /
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test5/2-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test5/img/2-2.jpg)
 
 ##### 3.总结
 

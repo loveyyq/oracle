@@ -19,25 +19,25 @@
 
 - 登录
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E7%99%BB%E5%BD%95.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E7%99%BB%E5%BD%95.jpg)
 
 - 创建表空间
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E5%88%9B%E5%BB%BA%E8%A1%A8%E7%A9%BA%E9%97%B4users02.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E5%88%9B%E5%BB%BA%E8%A1%A8%E7%A9%BA%E9%97%B4users02.jpg)
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E5%88%9B%E5%BB%BA%E8%A1%A8%E7%A9%BA%E9%97%B4users03.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E5%88%9B%E5%BB%BA%E8%A1%A8%E7%A9%BA%E9%97%B4users03.jpg)
 
 - 给用户cc授予使用表空间的权限
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E7%BB%99%E7%94%A8%E6%88%B7cc%E6%8E%88%E4%BA%88%E6%9D%83%E9%99%90.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E7%BB%99%E7%94%A8%E6%88%B7cc%E6%8E%88%E4%BA%88%E6%9D%83%E9%99%90.jpg)
 
 - 执行过程
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.jpg)
 
 - 创建orders表
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E5%88%9B%E5%BB%BAorders%E8%A1%A8.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E5%88%9B%E5%BB%BAorders%E8%A1%A8.jpg)
 
 ```sql
 CREATE TABLE ORDERS
@@ -158,7 +158,7 @@ PARTITION BY RANGE (ORDER_DATE)
 
 - 创建order_details表
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E5%88%9B%E5%BB%BAorder_details%E8%A1%A8.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E5%88%9B%E5%BB%BAorder_details%E8%A1%A8.jpg)
 
 ```sql
 CREATE TABLE order_details
@@ -181,7 +181,7 @@ PARTITION BY REFERENCE (order_details_fk1);
 
 - 插入数据
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE.jpg)
 
 ```sql
 declare
@@ -258,7 +258,7 @@ end;
 
 - 查询
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E6%9F%A5%E8%AF%A2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E6%9F%A5%E8%AF%A2.jpg)
 
 ```sql
 select count(*) from orders;
@@ -271,7 +271,7 @@ select count(*) from order_details;
 SELECT tablespace_name,FILE_NAME,BYTES/1024/1024 MB,MAXBYTES/1024/1024 MAX_MB,autoextensible FROM dba_data_files  WHERE  tablespace_name='USERS';
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B51.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B51.jpg)
 
 ```sql
 SELECT a.tablespace_name "表空间名",Total/1024/1024 "大小MB",
@@ -284,7 +284,7 @@ SELECT a.tablespace_name "表空间名",Total/1024/1024 "大小MB",
  where  a.tablespace_name = b.tablespace_name;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test3/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B52.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test3/img/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B52.jpg)
 
 ## 实验总结
 

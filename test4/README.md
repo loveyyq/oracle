@@ -12,13 +12,13 @@
 
 ##### 1.登录用户
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/1.jpg)
 
 ##### 2.执行sql脚本
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/2-1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/2-1.jpg)
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/2-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/2-2.jpg)
 
 ##### 3.查询数据
 
@@ -30,11 +30,11 @@ select * from ORDER_DETAILS where  order_id=1;
 select * from VIEW_ORDER_DETAILS where order_id=1;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-1-1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-1-1.jpg)
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-1-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-1-2.jpg)
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-1-3.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-1-3.jpg)
 
 - 递归查询某个员工及其所有下属，子下属员工。
 
@@ -48,13 +48,13 @@ WITH A (EMPLOYEE_ID,NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,SALARY,MANAGER_ID,DEPARTME
 SELECT * FROM A;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-2-1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-2-1.jpg)
 
 ```sql
 SELECT * FROM employees START WITH EMPLOYEE_ID = 11 CONNECT BY PRIOR  EMPLOYEE_ID = MANAGER_ID;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-2-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-2-2.jpg)
 
 - 查询订单表，并且包括订单的订单应收货款: Trade_Receivable=sum(ORDER_DETAILS.ProductNum*ORDER_DETAILS.ProductPrice)- Discount。
 
@@ -62,7 +62,7 @@ SELECT * FROM employees START WITH EMPLOYEE_ID = 11 CONNECT BY PRIOR  EMPLOYEE_I
 select * from ORDERS;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-3.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-3.jpg)
 
 - 查询订单详表，要求显示订单的客户名称和客户电话，产品类型用汉字描述。
 
@@ -73,7 +73,7 @@ where o.order_id=d.order_id
 and d.product_name=p.product_name
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-4.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-4.jpg)
 
 - 查询出所有空订单，即没有订单详单的订单。
 
@@ -86,7 +86,7 @@ from orders o,order_details d
 where o.order_id=d.order_id)
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-5.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-5.jpg)
 
 - 查询部门表，同时显示部门的负责人姓名。
 
@@ -97,7 +97,7 @@ where d.department_id=e.department_id
 and e.manager_id=d.department_id
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-6.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-6.jpg)
 
 - 查询部门表，统计每个部门的销售总金额。
 
@@ -111,7 +111,7 @@ and o.order_id=d.order_id),departments d
 group by d.department_name
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/3-7.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/3-7.jpg)
 
 ##### 4.统计情况
 
@@ -121,7 +121,7 @@ group by d.department_name
 select * from dba_data_files;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/4-1.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/4-1.jpg)
 
 - 查看表空间的使用情况
 
@@ -143,7 +143,7 @@ GROUP BY tablespace_name) b
 WHERE a.tablespace_name = b.tablespace_name
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/4-2.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/4-2.jpg)
 
 - 查看数据文件大小
 
@@ -151,7 +151,7 @@ WHERE a.tablespace_name = b.tablespace_name
 ls -lh
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test4/4-3.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test4/img/4-3.jpg)
 
 ##### 5.总结
 

@@ -26,21 +26,21 @@
 
 运行结果
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E6%9F%A5%E8%AF%A2%E4%B8%80%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E6%9F%A5%E8%AF%A2%E4%B8%80%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
 
 查询统计
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E6%9F%A5%E8%AF%A2%E4%B8%80%E7%BB%9F%E8%AE%A1.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E6%9F%A5%E8%AF%A2%E4%B8%80%E7%BB%9F%E8%AE%A1.png)
 
 ###### 查询二
 
 运行结果
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E6%9F%A5%E8%AF%A2%E4%BA%8C%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E6%9F%A5%E8%AF%A2%E4%BA%8C%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
 
 查询统计
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E6%9F%A5%E8%AF%A2%E4%BA%8C%E7%BB%9F%E8%AE%A1.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E6%9F%A5%E8%AF%A2%E4%BA%8C%E7%BB%9F%E8%AE%A1.png)
 
 ###### 结论分析
 
@@ -50,11 +50,11 @@
 
 查询一的优化指导
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E4%BC%98%E5%8C%96%E6%8C%87%E5%AF%BC.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E4%BC%98%E5%8C%96%E6%8C%87%E5%AF%BC.png)
 
 建立索引
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95.png)
 
 ##### 3.设计自己的查询语句
 
@@ -66,4 +66,4 @@ where jobs.job_id = employees.job_id
 GROUP BY jobs.job_id;
 ```
 
-![](https://github.com/loveyyq/oracle/blob/master/test1/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E5%8F%A5%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C.png)
+![](https://github.com/loveyyq/oracle/blob/master/test1/img/%E8%AE%BE%E8%AE%A1%E8%AF%AD%E5%8F%A5%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C.png)

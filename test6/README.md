@@ -34,11 +34,11 @@
 
 ## 2.类图
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/类图.png)
+![](https://github.com/loveyyq/oracle/blob/master/test6/%E7%B1%BB%E5%9B%BE.png)
 
 ## 3.数据库设计
 
-![](https://github.com/loveyyq/oracle/blob/master/test6/数据库.jpg)
+![](https://github.com/loveyyq/oracle/blob/master/test6/%E6%95%B0%E6%8D%AE%E5%BA%93.jpg)
 
 ### 3.1 admin(管理员表)
 

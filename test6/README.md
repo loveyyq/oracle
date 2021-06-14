@@ -32,7 +32,7 @@
 
 登录注册功能：管理员和用户可以进行登录和注册的功能。
 
-## 2.类图
+## 2.类图设计
 
 ![](https://github.com/loveyyq/oracle/blob/master/test6/%E7%B1%BB%E5%9B%BE.png)
 
